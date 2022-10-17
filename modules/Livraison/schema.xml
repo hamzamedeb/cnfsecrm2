@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_livraison</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_livraison` (
+  `livraisonid` int(19) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `tags` varchar(255) DEFAULT NULL,  
+   PRIMARY KEY (`livraisonid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtiger_livraisoncf</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_livraisoncf` (
+  `livraisonid` int(19) NOT NULL,
+   PRIMARY KEY (`livraisonid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtiger_history_livraison</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_history_livraison` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `livraisonid` int(11) NOT NULL,
+  `productid` int(11) NOT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `oldqty` int(11) DEFAULT NULL,
+  `newqty` int(11) DEFAULT NULL,
+  PRIMARY KEY  (`id`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;]]></sql>
+		</table>
+	</tables>
+</schema>

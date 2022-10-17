@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_arrivages</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_arrivages` (
+  `arrivagesid` int(19) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `tags` varchar(255) DEFAULT NULL,  
+   PRIMARY KEY (`arrivagesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtiger_arrivagescf</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_arrivagescf` (
+  `arrivagesid` int(19) NOT NULL,
+   PRIMARY KEY (`arrivagesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtiger_history_arrivages</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_history_arrivages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `arrivageid` int(11) NOT NULL,
+  `productid` int(11) NOT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `oldqty` int(11) DEFAULT NULL,
+  `newqty` int(11) DEFAULT NULL,
+  PRIMARY KEY  (`id`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;]]></sql>
+		</table>
+	</tables>
+</schema>

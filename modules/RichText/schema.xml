@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_richtext_settings</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_richtext_settings` (
+  `id` int(10) NOT NULL,
+  `value` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
